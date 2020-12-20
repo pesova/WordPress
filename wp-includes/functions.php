@@ -7779,3 +7779,9 @@ function is_php_version_compatible( $required ) {
 function wp_fuzzy_number_match( $expected, $actual, $precision = 1 ) {
 	return abs( (float) $expected - (float) $actual ) <= $precision;
 }
+
+function new_excerpt_more($more){
+	global $post;
+	return '...<a class="moretag" href="'. get_permalink($post->ID).'"> continue reading &raquo;</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

@@ -10,31 +10,33 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<div class="container">
+        <div class="row" id="primary">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+            <main id="content" class="col-sm-8">
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			<?php
+				while ( have_posts() ) :
+					the_post();
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'bootstrap-to-wordpress' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'bootstrap-to-wordpress' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+					get_template_part( 'template-parts/content', get_post_type() );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 
-		endwhile; // End of the loop.
-		?>
+				endwhile; // End of the loop.
+			?>
 
-	</main><!-- #main -->
+			</main><!-- #main -->
+
+			<aside class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</aside>
+		</div>
+	</div>
 
 <?php
-get_sidebar();
+
 get_footer();

@@ -32,7 +32,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bootstrap-to-wordpress' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#context"><?php _e( 'Skip to content', 'bootstrap2wordpress' ); ?></a>
 
 	<header class="site-header" role="banner">
         <!-- NavBar  -->
@@ -53,28 +53,22 @@
                     </div>
 
 
-					<?php 
-						wp_nav_menu( array(
-							'theme_location'	=> 'primary',
-							'container' 		=> 'nav',
-							'container_class'	=> 'navbar-collapse collapse',
-							'menu_class'		=>	'nav navbar-nav navbar-right'				
-						)
+					
+                    <div class="navbar-collapse collapse">
 
-						);
+                        <?php 
+                            wp_nav_menu( array(
+                                'theme_location'	=> 'primary',
+                                'container' 		=> 'ul',
+                                'container_class'	=> 'navbar-collapse collapse',
+                                'menu_class'		=>	'nav navbar-nav navbar-right'				
+                            )
 
-					?>
-                    <!-- <div class="navbar-collapse collapse">
+                            );
 
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="/">Home</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="Resources.html">Resources</a></li>
-                            <li><a href="Contact.html">Contact</a></li>
+                        ?>
 
-                        </ul>
-
-                    </div> -->
+                    </div>
                 </div>
 
             </div>
