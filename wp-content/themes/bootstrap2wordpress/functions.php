@@ -51,6 +51,7 @@ if ( ! function_exists( 'bootstrap_to_wordpress_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'bootstrap-to-wordpress' ),
+				'footer' => esc_html__( 'Footer', 'bootstrap-to-wordpress' ),
 			)
 		);
 

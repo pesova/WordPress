@@ -51,6 +51,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 #	- Theme specific styles
 --------------------------------------------------------------*/
 
+.navbar-nav>li.current_page_item a,
+.navbar-nav>li.current_page_parent a {
+    color: white !important;
+}
+
 @media screen and (min-width: 37.5em) {
     .menu-toggle {
         display: none;
@@ -405,7 +410,7 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #c9302c;
 }
 

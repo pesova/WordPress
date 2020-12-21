@@ -65,7 +65,7 @@
             </div>
 
             <div class="col-sm-6">
-                <nav>
+                <!-- <nav>
                     <ul class="list-unstyled list-inline">
                         <li><a href="/">Home</a></li>
                         <li><a href="">Blog</a></li>
@@ -75,10 +75,22 @@
                             <a href="">Sign up now</a>
                         </li>
                     </ul>
+                </nav> -->
+                <nav>
+                <?php 
+                    wp_nav_menu( array(
+                        'theme_location'	=> 'footer',
+                        'container' 		=> 'ul',
+                        'menu_class'		=>	'list-unstyle list-inline'				
+                    )
+
+                    );
+
+                ?>
                 </nav>
             </div>
             <div class="col-sm-3">
-                <p class="pull-right">&copy; 2014 BradHussey</p>
+                <p class="pull-right">&copy; <?PHP echo date('Y');?> <?php the_author_link(); ?></p>
             </div>
         </div>
     </footer>
