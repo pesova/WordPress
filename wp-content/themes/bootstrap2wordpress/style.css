@@ -382,6 +382,15 @@ h2 {
     margin: 0 0 40px;
 }
 
+h1 small.archive-description {
+    color: white;
+    font-size: 14px;
+}
+
+h1 small.archive-description>p {
+    padding-top: 10px;
+}
+
 h3 {
     margin: 20px 0;
 }
@@ -897,6 +906,22 @@ footer li.signup-link a:hover {
 }
 
 
+/* Specific WordPress comment style  */
+
+#comments footer {
+    background: none;
+    color: inherit;
+}
+
+#comments footer a {
+    color: inherit;
+}
+
+#comments .comment-metadata {
+    margin: 10px 0 0;
+}
+
+
 /* Blog Section ends */
 
 
@@ -978,6 +1003,7 @@ button[type="submit"] {
     background-image: none;
     border: none;
     border-radius: 6px;
+    padding: 5px;
 }
 
 input[type="submit"]:hover,
