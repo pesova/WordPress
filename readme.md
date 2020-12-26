@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>WordPress ReadMe</title>
+	<h3>WordPress &#8250; ReadMe</h3>
 	<link rel="stylesheet" href="wp-admin/css/install.css?ver=20100228" type="text/css" />
 </head>
 <body>
